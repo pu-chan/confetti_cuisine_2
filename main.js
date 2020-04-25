@@ -10,6 +10,7 @@ mongoose.connect(
     "mongodb://localhost:27017/confetti_cuisine",
     {useNewUrlParser: true}
 );
+mongoose.Promise = global.Promise;
 const layouts = require("express-ejs-layouts");
 app.set("view engine", "ejs");
 app.use(layouts);
