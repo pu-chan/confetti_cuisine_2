@@ -8,7 +8,7 @@ exports.getAllSubscribers = (req, res) => {
     Subscriber.find({})
         .exec()
         .then((subscribers) => {
-            res.render("subscribers" {
+            res.render("subscribers", {
                 subscribers: subscribers
             });
         })
