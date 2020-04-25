@@ -4,6 +4,12 @@
 const express = require("express"),
     app = express();
 app.set("port", process.env.PORT || 3000);
+// mongooseをロードしてデータベース接続を設定する
+const mongoose = require("mongoose");
+mongoose.connect(
+    "mongodb://localhost:27017/confetti_cuisine",
+    {useNewUrlParser: true}
+);
 const layouts = require("express-ejs-layouts");
 app.set("view engine", "ejs");
 app.use(layouts);
